@@ -1,0 +1,55 @@
+<div class="table-responsive">
+    <table class="display payment-table" id="">
+        <thead>
+            <tr>
+                <th>Organization No</th>
+                <th>Organization Name</th> 
+                <th>Organization Flow</th> 
+                <th>Action</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                $customerselect = "SELECT * FROM  `organization` WHERE `organization_name` != 'Other' ORDER BY `id` ASC  ";
+                $custoemrquery = mysqli_query($dbconnection, $customerselect);
+                if (mysqli_num_rows($custoemrquery) > 0) {
+                    $slno= 1;
+                while ($row = mysqli_fetch_array($custoemrquery)){
+                  $orgId = $row['id'];
+                  $orgName = $row['organization_name'];  
+                  $orgFlow = $row['org_flow'];
+                  $orgColor = $row['org_color'];
+                  $flow1 = $row['first_approval'];
+                  $flow2 = $row['orglead_approval'];
+                  $flow3 = $row['second_approval'];
+                  $flow4 = $row['third_approval'];
+                  $flow5 = $row['fourth_apporval'];
+            ?>
+                <tr>
+                <td><?php echo $slno  ?></td>
+                <td style="color: <?php echo $orgColor ?>;font-weight:550"><?php echo $orgName  ?></td>
+                <td class="tabel-icon">User<i data-feather="arrow-right"></i>
+                  <?php if(!empty($flow1)){ ?>
+                    Team Leader<i data-feather="arrow-right"></i>
+                  <?php } ?>
+                  <?php if(!empty($flow2)){ ?>
+                    Organization Lead<i data-feather="arrow-right"></i>
+                  <?php } ?>
+                  <?php if(!empty($flow3)){ ?>
+                    Accounts<i data-feather="arrow-right"></i>
+                  <?php } ?>
+                  <?php if(!empty($flow4)){ ?>
+                    MD<i data-feather="arrow-right"></i>
+                  <?php } ?>
+                  <?php if(!empty($flow5)){ ?>
+                    <?php if($orgId == 2){ echo 'AGEM Finance'; }else{ echo 'Finance'; } ?>
+                  <?php } ?>
+                </td> 
+                <td> 
+                  <a href="./add-new-organization.php?platform=<?php echo randomString(45); ?>&action=editorganization&fieldid=<?php echo passwordEncryption($orgId) ?>&flow=payment" class="btn btn-primary btn-xs" type="button">Edit</a>
+                </td>
+            </tr>
+            <?php  $slno++;} } ?>
+        </tbody>
+    </table>
+</div>

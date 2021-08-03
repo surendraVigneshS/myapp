@@ -1,0 +1,65 @@
+.card .card-header {
+            padding: 10px 20px;
+        }
+
+        .card .card-footer {
+            padding: 10px 20px;
+        }
+
+        .speci {
+            font-size: 20px;
+            color: #000;
+            font-weight: normal;
+        }
+
+        .profile-header {
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            border: 1px solid #efefef;
+            padding: 1.5rem;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .profile-menu {
+            background-color: #fff;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+            padding: 0.9375rem 1.5rem;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        .profile-menu .nav-tabs.nav-tabs-solid {
+            background-color: transparent;
+        }
+
+        .profile-header img {
+            max-width: 120px;
+            width: 100px;
+            height: 100px;
+            /* height: auto; */
+        }
+
+        .edit-link {
+            color: #a927f9;
+            font-size: 16px;
+            margin-top: 4px;
+        }
+
+        a:hover {
+            color: #a927f9;
+        }
+
+        p {
+            font-size: 14px;
+            color: #000;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 1.25rem !important;
+        }
+
+        .nav-tabs.nav-tabs-solid>li>a:hover,
+        .nav-tabs.nav-tabs-solid>li>a:focus {
+            background-color: #f5f5f5;
+        }
