@@ -135,8 +135,7 @@
                                                             <option value="0" <?php if($status == 0){ echo 'selected'; } ?>>Inactive</option> 
                                                         </select>
                                                     </div>
-                                                </div>
-
+                                                </div> 
                                                 <div class="card-footer text-center mt-2">
                                                     <button class="btn btn-info" type="submit" name="updatecolumn" id="updatecolumn">Save Changes</button>
                                                 </div>
