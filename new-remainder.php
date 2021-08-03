@@ -60,7 +60,7 @@ include('./include/authenticate.php');
                                             <form action="./include/_remainderController.php" method="POST" enctype="multipart/form-data">
                                                 <input type="hidden" name="logged_admin_id" value="<?php echo $logged_admin_id; ?>">
                                                 <h6 class="mb-4">Project Details</h6>
-
+<!-- New Li ne Added -->
                                                 
                                                 <div class="mb-3 row">
                                                     <label class="col-sm-3 col-form-label" for="remainderDate">Reminder Date</label>
